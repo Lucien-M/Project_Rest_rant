@@ -3,6 +3,11 @@ h1 {
     color: cornflowerblue;
 }
 
+h2 {
+    text-align: center;
+    color: yellow;
+}
+
 body {
     background-color: yellowgreen;
     text-align: center;
@@ -53,4 +58,8 @@ nav a {
 nav a:hover {
     color: pink;
     text-decoration: none;
+}
+
+form {
+    display: inline;
 }
