@@ -16,7 +16,7 @@ function show (data) {
                 <h3 className="inactive">
                   Not yet rated
                 </h3>
-    {/*<img src='/images/meal-3.jpg' alt='meal' />*/}
+              <img src='/images/meal-3.jpg' alt='meal' />
             <a href={`/places/${data.id}/edit`} className='btn btn-warning'>
                 Edit
             </a>
