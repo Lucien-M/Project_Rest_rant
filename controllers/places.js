@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const places = require("../models/places");
 const db = require("../models");
 
 router.get("/", (req, res) => {
@@ -11,6 +12,8 @@ router.get("/", (req, res) => {
       res.render("error404");
     });
 });
+
+//create
 
 router.post("/", (req, res) => {
   db.Place.create(req.body)
@@ -38,7 +41,9 @@ router.get("/new", (req, res) => {
 
 router.get("/:id", (req, res) => {
   db.Place.findById(req.params.id)
+    .populate("comments")
     .then((place) => {
+      console.log(place.comments);
       res.render("places/show", { place });
     })
     .catch((err) => {
