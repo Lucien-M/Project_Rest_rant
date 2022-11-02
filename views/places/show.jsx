@@ -30,11 +30,11 @@ function show(data) {
             method="POST"
             action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}
           >
-            {/*<input
+            <input
               type="submit"
               className="btn btn-danger"
               value="Delete Comment"
-      />*/}
+            />
           </form>
         </div>
       );
