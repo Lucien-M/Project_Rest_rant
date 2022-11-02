@@ -15,21 +15,23 @@ const placeSchema = new mongoose.Schema({
 });
 
 placeSchema.methods.showEstablished = function () {
-  return `${this.name} has been serving ${this.city} since ${this.founded}.`;
+  return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`;
 };
 
 module.exports = mongoose.model("Place", placeSchema);
 
-// [{
-//   name: 'H-Thai-ML',
-//   city: 'Seattle',
-//   state: 'WA',
-//   cuisines: 'Thai, Pan-Asian',
-//   pic: '/images/meal_tab.jpg'
-// }, {
-//   name: 'Coding Cat Cafe',
-//   city: 'Phoenix',
-//   state: 'AZ',
-//   cuisines: 'Coffee, Bakery',
-//   pic: '/images/meal_dis.jpg'
+// module.exports = [{
+//     name: 'H-Thai-ML',
+//         city: 'Seattle',
+//         state: 'WA',
+//         cuisines: 'Thai, Pan-Asian',
+//         pic: '/images/dog2.jpg'
+//       }, {
+//         name: 'Coding Dog Cafe',
+//         city: 'Phoenix',
+//         state: 'AZ',
+//         cuisines: 'Coffee, Bakery',
+//         pic: '/images/dog.png'
 // }]
+//https://www.lostdogcafe.com/wp-content/uploads/2017/10/ldcafe-trademarkblue.png
+//https://bloximages.chicago2.vip.townnews.com/bgdailynews.com/content/tncms/assets/v3/editorial/6/2a/62a7c38e-2251-5f19-8e67-6e84658552d2/6298fe9ec0bb7.image.jpg?resize=306%2C306
